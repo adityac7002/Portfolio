@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aditya Chauhan — AI Builder, IIT Guwahati. Portfolio." />
+    <title>Aditya Chauhan | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <!-- Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- ================================================================
+     NAVBAR
+     ================================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo mono">
+                <span class="logo-lt">&lt;</span><span class="logo-n">AC</span><span class="logo-lt">/&gt;</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nl mono">~/about</a>
+                <a href="#skills" class="nl mono">~/skills</a>
+                <a href="#projects" class="nl mono">~/projects</a>
+                <a href="#education" class="nl mono">~/education</a>
+                <a href="#contact" class="nl mono">~/contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://github.com/adityac7002" target="_blank" class="na-icon" title="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/aditya-chauhan-5b9b65265/" target="_blank" class="na-icon"
+                    title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================================================================
+     HERO
+     ================================================================ -->
+    <section class="hero" id="home">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-content">
+
+            <!-- Small tag above name -->
+            <div class="hero-tag mono">
+                <span class="htag-dot"></span>
+                <span class="c-comment">// hello, world — welcome to my portfolio</span>
+            </div>
+
+            <!-- Name -->
+            <h1 class="hero-name">
+                Aditya<br><span class="name-accent">Chauhan</span>
+            </h1>
+
+            <!-- Typing line -->
+            <div class="hero-role mono">
+                <span class="c-comment">// </span>
+                <span id="heroTyped" class="neon-green"></span><span class="blink-cur">█</span>
+            </div>
+
+            <!-- Brief description -->
+            <p class="hero-desc">
+                B.Tech Chemical Engineering @ <span class="neon-blue">IIT Guwahati</span> · Building intelligent systems
+                at the intersection of AI, data science, and engineering.
+            </p>
+
+            <!-- CTAs -->
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-play"></i> View Projects
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-terminal"></i> Contact Me
+                </a>
+            </div>
+
+            <!-- Badges -->
+            <div class="hero-badges">
+                <span class="hbadge"><i class="fas fa-graduation-cap"></i> IIT Guwahati</span>
+                <span class="hbadge hbadge-gold"><i class="fas fa-medal"></i> SIH 2025 🥇</span>
+                <span class="hbadge"><i class="fas fa-fire-alt"></i> CGPA 8.19</span>
+            </div>
+
+        </div>
+
+        <!-- Floating code card (accent, not main content) -->
+        <div class="hero-code-accent glass-card">
+            <div class="hca-bar">
+                <div class="traffic-lights">
+                    <span class="tl tr"></span><span class="tl ty"></span><span class="tl tg"></span>
+                </div>
+                <span class="mono dimmed" style="font-size:0.72rem">hero.tsx</span>
+            </div>
+            <pre class="hca-code mono"><span class="c-kw">const</span> <span class="c-var">me</span> <span class="c-op">=</span> <span class="c-op">{</span>
+  <span class="c-key">name</span><span class="c-op">:</span> <span class="c-str">"Aditya Chauhan"</span><span class="c-op">,</span>
+  <span class="c-key">role</span><span class="c-op">:</span> <span class="c-str">"AI Engineer"</span><span class="c-op">,</span>
+  <span class="c-key">cgpa</span><span class="c-op">:</span> <span class="c-num">8.19</span><span class="c-op">,</span>
+  <span class="c-key">award</span><span class="c-op">:</span> <span class="c-str">"SIH 2025 🏆"</span>
+<span class="c-op">};</span></pre>
+        </div>
+
+        <div class="scroll-hint">
+            <div class="sh-line"></div>
+            <span class="sh-label mono">scroll</span>
+        </div>
+    </section>
+
+    <!-- ================================================================
+     ABOUT
+     ================================================================ -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="sec-label mono"><span class="c-comment">// </span><span class="sec-num">01</span> about.json
+            </div>
+            <h2 class="sec-title">About Me</h2>
+
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>Hey! I'm <span class="neon-blue fw6">Aditya Chauhan</span>, a B.Tech student in
+                        <span class="fw6">Chemical Engineering</span> at the
+                        <span class="neon-blue fw6">Indian Institute of Technology, Guwahati</span>.
+                    </p>
+
+                    <p>I thrive at the intersection of engineering, data science, and AI — building systems
+                        that are not just functional, but intelligent. From satellite data pipelines to self-learning
+                        notification orchestrators, I turn complex problems into elegant, data-driven solutions.</p>
+
+                    <p>I communicate in <span class="fw6">English, Hindi, and Assamese</span>, and enjoy UI/UX design
+                        and hackathons.</p>
+
+                    <div class="stat-row">
+                        <div class="stat-chip sc-blue"><span class="sc-n">8.19</span><span class="sc-l">CGPA</span>
+                        </div>
+                        <div class="stat-chip sc-green"><span class="sc-n">2+</span><span class="sc-l">AI
+                                Projects</span></div>
+                        <div class="stat-chip sc-gold"><span class="sc-n">🥇</span><span class="sc-l">SIH Gold</span>
+                        </div>
+                        <div class="stat-chip sc-purple"><span class="sc-n">3</span><span class="sc-l">Languages</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-snippet-card glass-card reveal">
+                    <div class="csc-bar">
+                        <div class="traffic-lights"><span class="tl tr"></span><span class="tl ty"></span><span
+                                class="tl tg"></span></div>
+                        <span class="mono dimmed" style="font-size:0.72rem">{} about.json</span>
+                    </div>
+                    <pre class="csc-pre mono"><span class="c-op">{</span>
+  <span class="c-key">"name"</span><span class="c-op">:</span>     <span class="c-str">"Aditya Chauhan"</span><span class="c-op">,</span>
+  <span class="c-key">"uni"</span><span class="c-op">:</span>      <span class="c-str">"IIT Guwahati"</span><span class="c-op">,</span>
+  <span class="c-key">"major"</span><span class="c-op">:</span>    <span class="c-str">"Chemical Eng."</span><span class="c-op">,</span>
+  <span class="c-key">"cgpa"</span><span class="c-op">:</span>     <span class="c-num">8.19</span><span class="c-op">,</span>
+  <span class="c-key">"focus"</span><span class="c-op">:</span>    <span class="c-str">"AI + Data Sci"</span><span class="c-op">,</span>
+  <span class="c-key">"award"</span><span class="c-op">:</span>    <span class="c-str neon-green">"SIH 2025 🏆"</span>
+<span class="c-op">}</span></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+     SKILLS
+     ================================================================ -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <div class="sec-label mono"><span class="c-comment">// </span><span class="sec-num">02</span> skills.py
+            </div>
+            <h2 class="sec-title">Technical Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-card-head">
+                        <i class="fas fa-code sc-icon"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="stags">
+                        <span class="stag stag-b">Python</span><span class="stag stag-o">C</span>
+                        <span class="stag stag-o">C++</span><span class="stag stag-g">SQL</span>
+                        <span class="stag stag-y">HTML</span><span class="stag stag-y">CSS</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-card-head">
+                        <i class="fas fa-layer-group sc-icon"></i>
+                        <h3>Frameworks &amp; Libraries</h3>
+                    </div>
+                    <div class="stags">
+                        <span class="stag stag-b">NumPy</span><span class="stag stag-b">Pandas</span>
+                        <span class="stag stag-p">Matplotlib</span><span class="stag stag-g">Scikit-Learn</span>
+                        <span class="stag stag-o">LLaMA 3.2</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-card-head">
+                        <i class="fas fa-wrench sc-icon"></i>
+                        <h3>Tools &amp; Platforms</h3>
+                    </div>
+                    <div class="stags">
+                        <span class="stag stag-g">GitHub</span><span class="stag stag-p">Figma</span>
+                        <span class="stag stag-y">LaTeX</span><span class="stag stag-b">CLI</span>
+                        <span class="stag stag-o">MATLAB</span><span class="stag stag-g">UI/UX</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-card-head">
+                        <i class="fas fa-book-open sc-icon"></i>
+                        <h3>Key Courses</h3>
+                    </div>
+                    <div class="stags">
+                        <span class="stag stag-b">Linear Algebra</span><span class="stag stag-b">Calculus</span>
+                        <span class="stag stag-g">Numerical Methods</span><span
+                            class="stag stag-p">Thermodynamics</span>
+                        <span class="stag stag-o">Fluid Mechanics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+     PROJECTS
+     ================================================================ -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="sec-label mono"><span class="c-comment">// </span><span class="sec-num">03</span> projects.ts
+            </div>
+            <h2 class="sec-title">Projects</h2>
+
+            <div class="project-grid">
+
+                <!-- AGROW -->
+                <div class="pcard glass-card reveal" data-tilt data-tilt-max="6" data-tilt-speed="400"
+                    data-tilt-glare="true" data-tilt-max-glare="0.1">
+                    <div class="pcard-top">
+                        <div class="pcard-tabs">
+                            <span class="ptab active mono">agrow.py</span>
+                            <span class="ptab mono dimmed">README.md</span>
+                        </div>
+                        <a href="https://github.com/adityac7002" target="_blank" class="pcard-gh"><i
+                                class="fab fa-github"></i> Repo</a>
+                    </div>
+                    <div class="pcard-meta">
+                        <span class="pmeta-badge pgold">🏆 SIH 2025</span>
+                        <span class="pmeta-date mono">Aug – Dec 2025</span>
+                    </div>
+                    <h3 class="pcard-title neon-blue">AGROW</h3>
+                    <p class="pcard-sub mono c-comment">// Crop Health AI Platform</p>
+                    <p class="pcard-desc">Satellite telemetry pipeline (NDVI, soil moisture). Groq/Gemini LLM
+                        integration. K-Means clustering to classify crop stress into actionable insights.</p>
+                    <!-- Code snippet that reveals on hover -->
+                    <div class="pcard-code-block">
+                        <div class="pcb-header mono"><span class="neon-green">▶</span> python agrow.py</div>
+                        <pre
+                            class="pcb-pre mono"><span class="c-kw">def</span> <span class="c-fn">analyze</span><span class="c-op">(</span>telemetry<span class="c-op">):</span>
+    clusters <span class="c-op">=</span> KMeans<span class="c-op">.</span>fit<span class="c-op">(</span>telemetry<span class="c-op">)</span>
+    <span class="c-kw">return</span> LLM<span class="c-op">.</span>generate<span class="c-op">(</span>clusters<span class="c-op">)</span></pre>
+                    </div>
+                    <div class="pcard-stack">
+                        <span class="ptag">Python</span><span class="ptag">Pandas</span>
+                        <span class="ptag">NumPy</span><span class="ptag">LLM APIs</span><span
+                            class="ptag">K-Means</span>
+                    </div>
+                </div>
+
+                <!-- AURORA -->
+                <div class="pcard glass-card reveal" data-tilt data-tilt-max="6" data-tilt-speed="400"
+                    data-tilt-glare="true" data-tilt-max-glare="0.1">
+                    <div class="pcard-top">
+                        <div class="pcard-tabs">
+                            <span class="ptab active mono">aurora.py</span>
+                            <span class="ptab mono dimmed">pipeline.json</span>
+                        </div>
+                        <a href="https://github.com/adityac7002" target="_blank" class="pcard-gh"><i
+                                class="fab fa-github"></i> Repo</a>
+                    </div>
+                    <div class="pcard-meta">
+                        <span class="pmeta-badge ppurple">🎯 Kriti</span>
+                        <span class="pmeta-date mono">Feb – Mar 2026</span>
+                    </div>
+                    <h3 class="pcard-title neon-purple">Project Aurora</h3>
+                    <p class="pcard-sub mono c-comment">// Self-Learning Notification Orchestrator</p>
+                    <p class="pcard-desc">Python + LLaMA 3.2 AI pipeline with two-phase autonomous design: behavioral
+                        segmentation + CTR-driven auto-optimization. 10+ microservice CLI tool.</p>
+                    <div class="pcard-code-block">
+                        <div class="pcb-header mono"><span class="neon-green">▶</span> python aurora.py</div>
+                        <pre
+                            class="pcb-pre mono"><span class="c-kw">class</span> <span class="c-cn">Aurora</span><span class="c-op">:</span>
+  <span class="c-kw">def</span> <span class="c-fn">run</span><span class="c-op">(</span>self, users<span class="c-op">):</span>
+    <span class="c-kw">return</span> llama<span class="c-op">.</span>optimize<span class="c-op">(</span>users<span class="c-op">)</span></pre>
+                    </div>
+                    <div class="pcard-stack">
+                        <span class="ptag">Python</span><span class="ptag">LLaMA 3.2</span>
+                        <span class="ptag">Pandas</span><span class="ptag">Segmentation</span><span
+                            class="ptag">CLI</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+     EDUCATION
+     ================================================================ -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <div class="sec-label mono"><span class="c-comment">// </span><span class="sec-num">04</span> education.md
+            </div>
+            <h2 class="sec-title">Education</h2>
+
+            <div class="edu-list">
+
+                <div class="edu-card glass-card reveal">
+                    <div class="edu-left"><span class="edu-icon">🎓</span></div>
+                    <div class="edu-body">
+                        <h3 class="edu-title">B.Tech — Chemical Engineering</h3>
+                        <p class="edu-place">Indian Institute of Technology, Guwahati</p>
+                        <p class="edu-detail mono c-comment">// Focus: AI, Data Science, Computational Methods</p>
+                    </div>
+                    <div class="edu-right">
+                        <span class="edu-year">2024–Present</span>
+                        <span class="edu-grade neon-yellow">8.19 CGPA</span>
+                    </div>
+                </div>
+
+                <div class="edu-card glass-card reveal">
+                    <div class="edu-left"><span class="edu-icon">📚</span></div>
+                    <div class="edu-body">
+                        <h3 class="edu-title">Senior Secondary (Class XII)</h3>
+                        <p class="edu-place">CBSE Board</p>
+                    </div>
+                    <div class="edu-right">
+                        <span class="edu-year">2024</span>
+                        <span class="edu-grade neon-green">95.60%</span>
+                    </div>
+                </div>
+
+                <div class="edu-card glass-card reveal">
+                    <div class="edu-left"><span class="edu-icon">📖</span></div>
+                    <div class="edu-body">
+                        <h3 class="edu-title">Secondary (Class X)</h3>
+                        <p class="edu-place">SEBA Board</p>
+                    </div>
+                    <div class="edu-right">
+                        <span class="edu-year">2022</span>
+                        <span class="edu-grade neon-green">95.33%</span>
+                    </div>
+                </div>
+
+                <!-- Achievement -->
+                <div class="achievement-banner reveal">
+                    <div class="ab-glow-blob"></div>
+                    <span class="ab-trophy">🥇</span>
+                    <div class="ab-info">
+                        <strong>Smart India Hackathon 2025 — Gold Medal</strong>
+                        <p class="mono c-comment">// Mathworks Problem Statement · Hyderabad · 2025</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+     CONTACT
+     ================================================================ -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="sec-label mono"><span class="c-comment">// </span><span class="sec-num">05</span> contact.json
+            </div>
+            <h2 class="sec-title">Get In Touch</h2>
+            <p class="contact-intro">Have a project, opportunity, or question? My inbox is always open.</p>
+
+            <div class="contact-grid">
+                <a href="mailto:adityac7002@iitg.ac.in" class="ccard glass-card reveal" id="cc-email">
+                    <div class="ccard-ico" style="color:#f44747"><i class="fas fa-envelope"></i></div>
+                    <div class="ccard-info">
+                        <span class="ccard-lbl mono c-comment">// email</span>
+                        <span class="ccard-val">adityac7002@iitg.ac.in</span>
+                    </div>
+                    <span class="ccard-arrow">→</span>
+                </a>
+                <a href="https://github.com/adityac7002" target="_blank" class="ccard glass-card reveal" id="cc-gh">
+                    <div class="ccard-ico" style="color:#e6edf3"><i class="fab fa-github"></i></div>
+                    <div class="ccard-info">
+                        <span class="ccard-lbl mono c-comment">// github</span>
+                        <span class="ccard-val">adityac7002</span>
+                    </div>
+                    <span class="ccard-arrow">→</span>
+                </a>
+                <a href="https://www.linkedin.com/in/aditya-chauhan-5b9b65265/" target="_blank"
+                    class="ccard glass-card reveal" id="cc-li">
+                    <div class="ccard-ico" style="color:#0a66c2"><i class="fab fa-linkedin-in"></i></div>
+                    <div class="ccard-info">
+                        <span class="ccard-lbl mono c-comment">// linkedin</span>
+                        <span class="ccard-val">Aditya Chauhan</span>
+                    </div>
+                    <span class="ccard-arrow">→</span>
+                </a>
+                <a href="tel:+916002784598" class="ccard glass-card reveal" id="cc-ph">
+                    <div class="ccard-ico" style="color:#00ff88"><i class="fas fa-phone"></i></div>
+                    <div class="ccard-info">
+                        <span class="ccard-lbl mono c-comment">// phone</span>
+                        <span class="ccard-val">+91-6002784598</span>
+                    </div>
+                    <span class="ccard-arrow">→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================
+     FOOTER
+     ================================================================ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-logo mono">&lt;AC /&gt;</span>
+            <p>Designed &amp; built by <span class="neon-blue">Aditya Chauhan</span></p>
+            <p class="mono dimmed" style="font-size:0.75rem">// IIT Guwahati · 2025</p>
+        </div>
+    </footer>
+
+    <!-- ================================================================
+     ASK ME ANYTHING (FLOATING FORM)
+     ================================================================ -->
+    <button class="ama-btn mono" id="amaBtn">&gt; ask_me_anything()</button>
+
+    <div class="ama-popup glass-card" id="amaPopup">
+        <div class="ama-header">
+            <span class="mono neon-blue">~/ask_me</span>
+            <button class="ama-close" id="amaClose">&times;</button>
+        </div>
+        <form class="ama-form" id="amaForm" action="https://formspree.io/f/xkokrapn" method="POST">
+            <div class="ama-field">
+                <label class="mono c-comment" for="amaName">// your_name*</label>
+                <input type="text" id="amaName" name="name" required class="ama-input" placeholder="str" />
+            </div>
+            <div class="ama-field">
+                <label class="mono c-comment" for="amaEmail">// your_email*</label>
+                <input type="email" id="amaEmail" name="email" required class="ama-input" placeholder="str" />
+            </div>
+            <div class="ama-field">
+                <label class="mono c-comment" for="amaMessage">// message*</label>
+                <textarea id="amaMessage" name="message" required class="ama-input ama-textarea"
+                    placeholder="str"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary ama-submit mono">&gt; send_message()</button>
+            <p class="ama-success mono neon-green" id="amaSuccess" style="display: none;">// Message sent successfully!
+            </p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
